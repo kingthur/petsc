@@ -1,0 +1,102 @@
+0 SNES Function norm 1.371870931195e-01 
+    0 KSP Residual norm 9.577481644305e-02 
+    1 KSP Residual norm 2.643338373526e-02 
+    2 KSP Residual norm 2.034380224928e-02 
+    3 KSP Residual norm 8.827221776922e-03 
+    4 KSP Residual norm 6.794575005579e-03 
+    5 KSP Residual norm 2.992522703878e-03 
+    6 KSP Residual norm 2.283714925885e-03 
+    7 KSP Residual norm 1.015765905373e-03 
+    8 KSP Residual norm 7.700343662406e-04 
+    9 KSP Residual norm 3.448407074916e-04 
+   10 KSP Residual norm 2.601513625040e-04 
+   11 KSP Residual norm 1.170518591245e-04 
+   12 KSP Residual norm 8.799846342954e-05 
+   13 KSP Residual norm 3.972280721346e-05 
+   14 KSP Residual norm 2.978972498560e-05 
+   15 KSP Residual norm 1.347746421930e-05 
+   16 KSP Residual norm 1.008978734329e-05 
+   17 KSP Residual norm 4.571930500827e-06 
+   18 KSP Residual norm 3.418585482202e-06 
+   19 KSP Residual norm 1.550715037559e-06 
+   20 KSP Residual norm 1.158539871913e-06 
+   21 KSP Residual norm 5.259211726305e-07 
+   22 KSP Residual norm 3.926841954979e-07 
+   23 KSP Residual norm 1.783518685704e-07 
+   24 KSP Residual norm 1.331135320185e-07 
+   25 KSP Residual norm 6.048004250078e-08 
+   26 KSP Residual norm 4.512661697098e-08 
+   27 KSP Residual norm 2.050834161698e-08 
+   28 KSP Residual norm 1.529907655597e-08 
+   29 KSP Residual norm 6.954049508533e-09 
+   30 KSP Residual norm 5.186958135036e-09 
+   31 KSP Residual norm 2.357963942464e-09 
+   32 KSP Residual norm 1.758614660048e-09 
+   33 KSP Residual norm 7.995231930763e-10 
+   34 KSP Residual norm 5.962602275104e-10 
+   35 KSP Residual norm 2.710947813001e-10 
+   36 KSP Residual norm 2.021649990347e-10 
+   37 KSP Residual norm 9.191969936495e-11 
+  1 SNES Function norm 3.678004325572e-10 
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+SNES Object: 1 MPI processes
+  type: newtonls
+  maximum iterations=50, maximum function evaluations=10000
+  tolerances: relative=1e-08, absolute=1e-50, solution=1e-08
+  total number of linear solver iterations=37
+  total number of function evaluations=2
+  norm schedule ALWAYS
+  SNESLineSearch Object: 1 MPI processes
+    type: bt
+      interpolation: cubic
+      alpha=1.000000e-04
+    maxstep=1.000000e+08, minlambda=1.000000e-12
+    tolerances: relative=1.000000e-08, absolute=1.000000e-15, lambda=1.000000e-08
+    maximum iterations=40
+  KSP Object: 1 MPI processes
+    type: richardson
+      Richardson: damping factor=1.
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-09, absolute=1e-50, divergence=10000.
+    left preconditioning
+    using PRECONDITIONED norm type for convergence test
+  PC Object: 1 MPI processes
+    type: asm
+      Additive Schwarz: total subdomain blocks = 3, amount of overlap = 0
+      Additive Schwarz: restriction/interpolation type - RESTRICT
+      Local solve is same for all blocks, in the following KSP and PC objects:
+      KSP Object: (sub_) 1 MPI processes
+        type: preonly
+        maximum iterations=10000, initial guess is zero
+        tolerances:  relative=1e-05, absolute=1e-50, divergence=10000.
+        left preconditioning
+        using NONE norm type for convergence test
+      PC Object: (sub_) 1 MPI processes
+        type: lu
+          out-of-place factorization
+          tolerance for zero pivot 2.22045e-14
+          matrix ordering: nd
+          factor fill ratio given 5., needed 1.45714
+            Factored matrix follows:
+              Mat Object: 1 MPI processes
+                type: seqaij
+                rows=11, cols=11
+                package used to perform factorization: petsc
+                total: nonzeros=51, allocated nonzeros=51
+                total number of mallocs used during MatSetValues calls =0
+                  not using I-node routines
+        linear system matrix = precond matrix:
+        Mat Object: 1 MPI processes
+          type: seqaij
+          rows=11, cols=11
+          total: nonzeros=35, allocated nonzeros=35
+          total number of mallocs used during MatSetValues calls =0
+            not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object: 1 MPI processes
+      type: seqaij
+      rows=32, cols=32
+      total: nonzeros=136, allocated nonzeros=136
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+N: 32 error l2 6.94666e-12 inf 1.2788e-10
